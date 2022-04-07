@@ -24,7 +24,7 @@ public class BankAccount {
 
     public void deposit(double amount){
         if(amount < 0){
-            //skip the application
+            throw new IllegalArgumentException("AMOUNT WAS NEGATIVE");
         }
 
         balance = balance + amount;
@@ -34,10 +34,10 @@ public class BankAccount {
 
     public double withdraw(double amount){
         if(amount < 0 ){
-        //skip the application
+            throw new IllegalArgumentException("AMOUNT WAS NEGATIVE");
     }
         if(amount > balance){
-        //skip the application
+        throw new IllegalArgumentException("amount is greater than balance");
 
         }
 
